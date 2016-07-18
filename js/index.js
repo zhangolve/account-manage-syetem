@@ -11,6 +11,29 @@ $("select").select2({
 });
 //select2结束
 
+//获取用户列表开始
+$.getJSON(root,function(data){
+     console.log(data[0].name);
+     for(var i=0;i<data.length;i++)
+       {
+  if(typeof data[i].number!=='undefined'){     
+        $('tbody').append('<tr><td>'+data[i].number+'</td>+<td>'+data[i].name+'</td><td>'+data[i].note+'</td><td>'+data[i].type+'</td><td>'+data[i].day+'</td></tr>')
+         }
+         
+         
+       }
+  
+     $('#table_id').DataTable();
+  
+  
+} );
+
+
+
+//获取用户列表结束
+
+
+
 //赋值
 $content = $('#content');
 $number = $('#number');
