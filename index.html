@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>LearnCode.Academy JQuery Part 4</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='http://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css'>
+<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/superhero/bootstrap.css'>
+<link rel='stylesheet prefetch' href='http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css'>
+
+
+
+
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="jumbotron">
+  <h1>账户管理系统</h1>
+  <br />
+  
+  <div>
+  
+  <div class="col-md-4">
+  
+  
+    <select class="js-example-basic-single js-states form-control" id="id_label_single" >
+<label for="id_label_single">
+  
+	<option></option>
+  <option value='NO'>普通</option>
+  <option value='AD'>管理员</option>
+  
+</label>
+
+</select>
+<p>当前时间：</p>
+  <p id="time"></p>
+  <br/>
+  <p>查询注册时间</p>
+  
+  <!--date range picker start-->
+  <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
+    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+    <span></span> <b class="caret"></b>
+</div>
+
+<!--date range picker end-->
+  </div>
+  
+  
+  
+  <div class="col-md-8">
+  <h4>添加一个账户</h4>
+  <p>编码: <input type="text" id="number"> </p>
+  <p>名称: <input type="text" id="name"> </p>
+  <p>备注: <input type="text" id="note"> </p>
+  
+  
+  <button class="btn btn-default" id="add-order">添加</button>
+  </div>
+  </div>
+  <hr />
+  <h3>Coffee Orders</h3>
+  <br />
+  <ul id='content'></ul>
+  <template id='order-template'>
+  <li data-id={{id}}>
+  <p><strong>
+    编码: <span class="noedit number">{{number}}</span>
+    <input class="edit number" />
+    <br />
+    名称: <span class="noedit name">{{name}}</span>
+    <input class="edit name" />
+    <br/>
+    备注: <span class="noedit note">{{note}}</span>
+    <input class="edit note" />
+    
+  </p></strong>
+  <button class="remove" data-id={{id}}>X</button>
+  <button class="editOrder noedit">Edit</button>
+  <button class="saveEdit edit">Save</button>
+  <button class="cancelEdit edit">Cancel</button>
+  <br />
+  </li>
+</template>
+</div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js'></script>
+<script src='http://cdn.jsdelivr.net/momentjs/latest/moment.min.js'></script>
+    <script src='http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js'></script>
+	<script src="pickdate.js"></script>
+		
+
+        <script src="js/index.js"></script>
+		
+			
+    
+    
+  </body>
+</html>
